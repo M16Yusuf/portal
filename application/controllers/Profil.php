@@ -17,7 +17,7 @@ class Profil extends CI_Controller {
         $data['judul'] = 'My Profil CMS';
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
 
-        $this->form_validation->set_rules('nama', 'Nama', 'required|trim|alpha', array('required' => 'Nama tidak boleh kosong!'));
+        $this->form_validation->set_rules('nama', 'Nama', 'required|trim', array('required' => 'Nama tidak boleh kosong!'));
 
 
         if ($this->form_validation->run() == false) {

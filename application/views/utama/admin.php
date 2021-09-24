@@ -4,6 +4,7 @@
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Data admin</h6>
+              
             </div>
             <div class="card-body">
             <a href="#" class="btn btn-success btn-icon-split mb-3" data-toggle="modal" data-target="#staticBackdrop">
@@ -12,6 +13,7 @@
                     </span>
                     <span class="text">Tambah User</span>
                   </a>
+                  <?= $this->session->flashdata('message'); ?>
               <div class="table-responsive">
                 <table class="table table-bordered" id="admin" width="100%" cellspacing="0">
                   <thead>
@@ -39,11 +41,9 @@
                             </td>
                             <td><?= $w['timestamp'] ?></td>
                             <td>
-                                <a href="#" class="btn btn-warning btn-circle mr-1">
-                                <i class="fas fa-pen"></i>
-                                <a href="#" class="btn btn-danger btn-circle">
+                                <a href="" class="btn btn-danger btn-circle mb-1" data-toggle="modal" onclick="confirm_modal('<?= base_url('admin/hapus/') ?><?= $w['id'] ?>','title');" data-target="modal_delete_m_n">
                                 <i class="fas fa-trash"></i>
-                  </a>
+                                </a>
                             </td>
                         </tr>
                         <?php $i++; ?>
@@ -53,11 +53,41 @@
             </div>
           </div>
 
+        <div class="modal fade" id="modal_delete_m_n" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hapus data admin</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Apakah anda yakin untuk menghapus admin?</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal" id="delete_cancel_link">Batal</button>
+                    <a class="btn btn-primary" id="delete_link_m_n">Hapus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function confirm_modal(delete_url, title) {
+            jQuery('#modal_delete_m_n').modal('show', {
+                backdrop: 'static',
+                keyboard: false
+            });
+            jQuery("#modal_delete_m_n .grt").text(title);
+            document.getElementById('delete_link_m_n').setAttribute("href", delete_url);
+            document.getElementById('delete_link_m_n').focus();
+        }
+    </script>
+
           <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Tambah Data Warga</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Tambah Admin</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

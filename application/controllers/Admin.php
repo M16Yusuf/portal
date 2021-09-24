@@ -55,17 +55,19 @@ class Admin extends CI_Controller {
                 'role' => htmlspecialchars($this->input->post('role'))
             ];
             $this->db->insert('user',$data);
-            $this->session->set_flashdata(
-                'message',
-                '<div class="alert alert-success" role="alert">
-            Selamat akun berhasil dibuat.
-            </div>'
-            );
+            $this->session->set_flashdata('message', '
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            User berhasil dibuat.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            ');
             redirect('admin');
         }
 	}
 
-    public function delete($id)
+    public function hapus($id)
     {
         $this->db->where('id', $id);
         $this->db->delete('user');

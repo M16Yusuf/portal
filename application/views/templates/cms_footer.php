@@ -46,9 +46,15 @@
 
   <!-- Custom scripts for all pages-->
   <script src="<?= base_url('assets/') ?>js/sb-admin-2.min.js"></script>
+  
 
   <!-- Page level plugins -->
   <script src="<?= base_url('assets/') ?>vendor/chart.js/Chart.min.js"></script>
+  
+	<script type="text/javascript" src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>
+	<script src="<?php echo base_url().'assets/ckeditor/ckeditor.js'?>"></script>
+
+  
 
   <!-- Page level custom scripts -->
   <script src="<?= base_url('assets/') ?>js/demo/chart-area-demo.js"></script>
@@ -57,3 +63,14 @@
 </body>
 
 </html>
+<script type="text/javascript">
+  $(function () {
+    CKEDITOR.replace('isi');
+  });
+</script>
+<script>
+    $('.custom-file-input').on('change', function() {
+        let fileName = $(this).val().split('\\').pop();
+        $(this).next('.custom-file-label').addClass("selected").html(fileName);
+    })
+</script>
