@@ -1,0 +1,20 @@
+/* carousel high */
+.carousel .item {
+    height: 300px;
+  }
+  
+  .carousel-item img {
+      /* position: absolute; */
+      /* top: 0; */
+      /* left: 0; */
+      max-height: 300px;
+  }
+
+/* show google map */
+/* Set the size of the div element that contains the map */
+#map {
+    height: 400px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+  }
