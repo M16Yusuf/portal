@@ -9,6 +9,10 @@
 <!-- end map -->
 
 <!-- Informasi -->
+<?php echo $kontak['0']['isi'] ?>
+<?php echo $kontak['1']['isi'] ?>
+<?php echo $kontak['2']['isi'] ?>
+<?php echo $kontak['3']['isi'] ?>
 <!-- end informasi -->
 
 <!-- end body -->

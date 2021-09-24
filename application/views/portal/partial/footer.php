@@ -33,11 +33,10 @@
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
                     </h6>
-                    <i class="fas fa-envelope me-3"></i>
-                    info@example.com
-                    </p>
-                    <p><i class="fas fa-phone me-3"></i> +62226865037</p>
-                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                    <p><i class="far fa-clock"></i> <?php echo $kontak['0']['isi'] ?></p>
+                    <p><i class="fas fa-envelope me-3"></i> <?php echo $kontak['1']['isi'] ?> </p>
+                    <p><i class="fas fa-phone me-3"></i> <?php echo $kontak['2']['isi'] ?> </p>
+                    <p><i class="fab fa-whatsapp"></i> <?php echo $kontak['3']['isi'] ?></p>
                 </div>
                 <!-- Grid column -->
             </div>

@@ -9,10 +9,10 @@ class Overview extends CI_Controller
 
     public function index()
     {
-
-        // load view admin/overview.php
+        $data['kontak'] = $this->db->get('aboutus')->result_array();
+        // load view portal Overview
         $this->load->view("portal/partial/header");
         $this->load->view("portal/overview");
-        $this->load->view("portal/partial/footer");
+        $this->load->view("portal/partial/footer",$data);
     }
 }
