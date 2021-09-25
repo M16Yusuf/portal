@@ -1,5 +1,5 @@
 <!-- body -->
-<div class="container py-5">
+<div class="container pt-0">
     <div class="jumbotron text-white jumbotron-image shadow" style="background-image: url(<?php echo base_url('assets/img/jumbotron.jpg') ?>);">
         <h2 class="mb-4">
             DESA LAKSANAMEKAR
@@ -9,7 +9,6 @@
         </p>
         <a href="https://www.google.com/maps/place/Kantor+Kepala+Desa+Laksanamekar/@-6.8825935,107.501757,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e4e79b10b24f:0xef6af5613ac05bcd!8m2!3d-6.8825925!4d107.5039195?hl=ID" target="#" class="btn btn-primary">
             <i class="fas fa-map-marker-alt"></i> Google Map</a>
-
     </div>
 </div>
 
