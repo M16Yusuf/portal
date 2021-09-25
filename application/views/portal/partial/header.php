@@ -21,7 +21,7 @@
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="<?php echo base_url('assets/img/logo.png') ?>" width="45" height="45" alt="">

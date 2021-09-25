@@ -1,14 +1,16 @@
 <!-- body -->
+<div class="container py-5">
+    <div class="jumbotron text-white jumbotron-image shadow" style="background-image: url(<?php echo base_url('assets/img/jumbotron.jpg') ?>);">
+        <h2 class="mb-4">
+            DESA LAKSANAMEKAR
+        </h2>
+        <p class="mb-4">
+            Jl. Raya Batujajar No.270, Laksanamekar, Padalarang, Kabupaten Bandung Barat, Jawa Barat 40553
+        </p>
+        <a href="https://www.google.com/maps/place/Kantor+Kepala+Desa+Laksanamekar/@-6.8825935,107.501757,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e4e79b10b24f:0xef6af5613ac05bcd!8m2!3d-6.8825925!4d107.5039195?hl=ID" target="#" class="btn btn-primary">
+            <i class="fas fa-map-marker-alt"></i> Google Map</a>
 
-<div class="jumbotron text-white jumbotron-image shadow" style="background-image: url(https://lh5.googleusercontent.com/p/AF1QipPA1xO4WId3vNJB3lR7_ERoxaFgVq2u_ySmZc3t=w426-h240-k-no);">
-    <h2 class="mb-4">
-        DESA LAKSANAMEKAR
-    </h2>
-    <p class="mb-4">
-        Jl. Raya Batujajar No.270, Laksanamekar, Padalarang, Kabupaten Bandung Barat, Jawa Barat 40553
-    </p>
-    <a href="https://www.google.com/maps/place/Kantor+Kepala+Desa+Laksanamekar/@-6.8825935,107.501757,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e4e79b10b24f:0xef6af5613ac05bcd!8m2!3d-6.8825925!4d107.5039195?hl=ID" target="#" class="btn btn-primary">
-        <i class="fas fa-map-marker-alt"></i> Google Map</a>
+    </div>
 </div>
 
 
