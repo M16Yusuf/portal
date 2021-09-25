@@ -2,7 +2,6 @@
 .carousel .item {
     height: 300px;
   }
-  
   .carousel-item img {
       /* position: absolute; */
       /* top: 0; */
@@ -18,3 +17,11 @@
     width: 100%;
     /* The width is the width of the web page */
   }
+
+/* jumbotron */
+  .jumbotron-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
