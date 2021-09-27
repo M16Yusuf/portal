@@ -43,8 +43,6 @@ class Kontak extends CI_Controller {
             $tlp = htmlspecialchars($this->input->post('tlp'));
             $wa = htmlspecialchars($this->input->post('wa'));
 
-            var_dump($jam);
-            var_dump($dbjam);
 
             if($jam <> $dbjam)
             {

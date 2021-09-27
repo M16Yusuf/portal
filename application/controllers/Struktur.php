@@ -11,8 +11,8 @@ class Struktur extends CI_Controller
     {
         $data['kontak'] = $this->db->get('aboutus')->result_array();
         // load view portal/struktur.php
-        $this->load->view("portal/partial/header");
-        $this->load->view("portal/struktur");
+        $this->load->view("portal/partial/header", $data);
+        $this->load->view("portal/struktur", $data);
         $this->load->view("portal/partial/footer", $data);
     }
 }

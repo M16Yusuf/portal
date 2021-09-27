@@ -41,6 +41,9 @@
                             </td>
                             <td><?= $w['timestamp'] ?></td>
                             <td>
+                                <a href="<?= base_url('admin/ubah/') ?><?= $w['id'] ?>" class="btn btn-warning btn-circle mb-1">
+                                <i class="fas fa-user-edit"></i>
+                                </a>
                                 <a href="" class="btn btn-danger btn-circle mb-1" data-toggle="modal" onclick="confirm_modal('<?= base_url('admin/hapus/') ?><?= $w['id'] ?>','title');" data-target="modal_delete_m_n">
                                 <i class="fas fa-trash"></i>
                                 </a>

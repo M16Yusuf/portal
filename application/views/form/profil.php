@@ -7,6 +7,8 @@
                   <h6 class="m-0 font-weight-bold text-primary">My Profile</h6>
                 </div>
                 <div class="card-body">
+                  
+                <?= $this->session->flashdata('message'); ?>
                 <form method="POST">
                 <div class="form-group row">
                     <input type="hidden" name="id" value="<?= $user['id'] ?>">

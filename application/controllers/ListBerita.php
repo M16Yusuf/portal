@@ -9,7 +9,7 @@ class ListBerita extends CI_Controller
 
     public function index()
     {
-        $query = $this->db->query('SELECT berita.id, berita.judul, berita.isi, berita.image, user.nama, berita.timestamp FROM berita INNER JOIN user ON berita.author=user.id;');
+        $query = $this->db->query('SELECT berita.id, berita.judul, berita.isi, berita.image, user.nama, berita.timestamp FROM berita INNER JOIN user ON berita.author=user.id ORDER BY berita.id DESC;');
         $data['berita'] = $query->result_array();
         $data['kontak'] = $this->db->get('aboutus')->result_array();
 

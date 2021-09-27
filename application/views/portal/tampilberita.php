@@ -6,12 +6,19 @@
 
         <div class="col-md-8 ">
             <br>
-            <h1><?= $berita['judul'] ?></h1>
-            <img class="card-img-top mt-3 mb-3" src="<?php echo base_url('assets/img/berita/' . $berita['image']) ?>" alt="Card image cap">
+            <blockquote class="blockquote text-center">
+                <h2>
+                    <p class="mb-0 text-left"><?= $berita['judul'] ?></p>
+                </h2>
+            </blockquote>
+
+            <img class="card-img-top mt-0 mb-3" src="<?php echo base_url('assets/img/berita/' . $berita['image']) ?>" alt="Card image cap">
             <?= $berita['isi'] ?>
-            <div class="float-right">
-                <?= $berita['nama'] ?>
-            </div>
+            <blockquote class="blockquote text-center">
+
+                <footer class="blockquote-footer">By : <cite title="Source Title"> <?= $berita['nama'] ?> </cite></footer>
+            </blockquote>
+
 
 
         </div>

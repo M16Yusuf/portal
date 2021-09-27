@@ -52,7 +52,7 @@
   <script src="<?= base_url('assets/') ?>vendor/chart.js/Chart.min.js"></script>
   
 	<script type="text/javascript" src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>
-	<script src="<?php echo base_url().'assets/ckeditor/ckeditor.js'?>"></script>
+  <script src="<?php echo base_url().'assets/ckeditor4/ckeditor.js'?>"></script>
 
   
 
@@ -67,10 +67,14 @@
   $(function () {
     CKEDITOR.replace('isi');
   });
+  $(function () {
+    CKEDITOR.replace('edit');
+  });
 </script>
 <script>
     $('.custom-file-input').on('change', function() {
         let fileName = $(this).val().split('\\').pop();
         $(this).next('.custom-file-label').addClass("selected").html(fileName);
     })
+    
 </script>

@@ -32,7 +32,14 @@ class Profil extends CI_Controller {
             ];
             $this->db->where('id', $this->input->post('id'));
             $this->db->update('user',$data);
-
+            $this->session->set_flashdata('message', '
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Nama lengkap berhasil diganti.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                ');
             redirect('Profil');
 
         }

@@ -2,12 +2,12 @@
         <div class="container-fluid">
             
             <h1 class="h3 mb-0 text-gray-800 mb-3">Profile</h1>
-            <?= $this->session->flashdata('message'); ?>
             <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Ganti password</h6>
-                </div>
-                <div class="card-body">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Ganti password</h6>
+              </div>
+              <div class="card-body">
+                  <?= $this->session->flashdata('message'); ?>
                 <form method="POST">
                 <div class="form-group row">
                     <label for="current_password" class="col-sm-2 col-form-label">Password Saat Ini</label>

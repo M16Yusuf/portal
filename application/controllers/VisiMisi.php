@@ -12,7 +12,7 @@ class VisiMisi extends CI_Controller
         $data['kontak'] = $this->db->get('aboutus')->result_array();
         // load view admin/overview.php
         $this->load->view("portal/partial/header");
-        $this->load->view("portal/visimisi");
+        $this->load->view("portal/visimisi", $data);
         $this->load->view("portal/partial/footer", $data);
     }
 }

@@ -90,4 +90,12 @@
     </div>
 
 </div>
+
 <!-- end body -->
+
+<!-- nitip
+ <blockquote class="blockquote text-center">
+    <p class="mb-0"> <?php echo $w['judul'] ?></p>
+    <footer class="blockquote-footer">By : <cite title="Source Title"> <?php echo $w['nama'] ?> </cite></footer>
+</blockquote>
+-->

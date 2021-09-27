@@ -8,21 +8,28 @@
                 </div>
                 <?= $this->session->flashdata('message'); ?>
                 <div class="card-body">
-                <form action="<?= base_url('berita/tambah')?>" method="post" enctype="multipart/form-data">
-	            <input type="text" id="judul" name="judul" class="form-control mb-3" placeholder="Judul berita" value="<?= $berita['judul']?>"/>
-	            <textarea id="isi" name="isi" class="form-control"></textarea>
-                
-                <img src="<?= base_url('assets/img/berita/news.png')?>" class="img-fluid mb-3 mt-3" style="width:300px;height:200px;">
-                <div class="custom-file mb-3">
+                  <form action="<?= base_url('berita/setdata')?>"method="POST" enctype="multipart/form-data">
+                  <input type="hidden" id="id" name="id" class="form-control" value="<?= $berita['id']?>"/>
+                  <input type="hidden" id="foto" name="foto" class="form-control" value="<?= $berita['image']?>"/>
+                  <input type="text" id="judul" name="judul" class="form-control" placeholder="Judul berita" value="<?= $berita['judul']?>"/>
+                  <?= form_error('judul', '<small class="text-danger pl-3">', '</small>') ?><br/>
+                  <div class="container-sm">
+                    <img src="<?= base_url('assets/img/berita/'.$berita['image'])?>" class="img-thumbnail mb-3">
+                  </div>
+                  <div class="custom-file mb-3">
                     <input type="file" class="custom-file-input" id="image" name="image">
                     <label class="custom-file-label" for="image">Choose file Max: 3MB</label>
+                    <?= form_error('image', '<small class="text-danger pl-3">', '</small>') ?>
                 </div>
+	                <textarea id="edit" name="edit" class="form-control mt-2"><?= $isi?></textarea>
+                  <?= form_error('isi', '<small class="text-danger pl-3">', '</small>') ?><br/>
+               
                 <button type="submit" name="submit" class="btn btn-primary float-right">Simpan</button>
                 </form>
                 </div>
               </div>
               
 
-        </div>
+        </div> 
       </div>
      

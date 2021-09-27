@@ -9,7 +9,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
         <div class="sidebar-brand-icon">
-          <i class="fas fa-city"></i>
+          <i class="fas fa-home"></i>
         </div>
         <div class="sidebar-brand-text mx-3">Laksanamekar</div>
       </a>
@@ -18,19 +18,19 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item">
+      <li <?= $this->uri->segment(1) == 'berita' || $this->uri->segment(1)=='' ? 'class="nav-item active"' : 'class="nav-item"' ?> >
         <a class="nav-link" href="<?= site_url('berita') ?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <i class="fas fa-fw fa-newspaper"></i>
           <span>Informasi Berita</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+      <li <?= $this->uri->segment(1) == 'desa' || $this->uri->segment(1)=='' ? 'class="nav-item active"' : 'class="nav-item"' ?>>
+        <a class="nav-link" href="<?= site_url('desa') ?>">
+          <i class="fas fa-fw fa-sitemap"></i>
           <span>Informasi Desa</span></a>
       </li>
-      <li class="nav-item">
+      <li <?= $this->uri->segment(1) == 'kontak' || $this->uri->segment(1)=='' ? 'class="nav-item active"' : 'class="nav-item"' ?>>
         <a class="nav-link" href="<?= site_url('kontak') ?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <i class="fas fa-fw fa-id-card"></i>
           <span>Informasi Kontak</span></a>
       </li>
 
@@ -38,7 +38,7 @@
       <div class="sidebar-heading">
         Administrator
       </div>
-      <li class="nav-item">
+      <li <?= $this->uri->segment(1) == 'admin' || $this->uri->segment(1)=='' ? 'class="nav-item active"' : 'class="nav-item"' ?>>
         <a class="nav-link" href="<?= site_url('admin') ?>">
           <i class="fas fa-fw fa-users"></i>
           <span>Kelola Admin</span></a>

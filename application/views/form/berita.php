@@ -11,7 +11,7 @@
                 <form action="<?= base_url('berita/tambah')?>" method="post" enctype="multipart/form-data">
 	            <input type="text" id="judul" name="judul" class="form-control" placeholder="Judul berita"/>
                 <?= form_error('judul', '<small class="text-danger pl-3">', '</small>') ?><br/>
-	            <textarea id="isi" name="isi" class="form-control"></textarea>
+	            <textarea id="isi" name="isi" class="ckeditor"></textarea>
                 <?= form_error('isi', '<small class="text-danger pl-3">', '</small>') ?><br/>
                 <div class="custom-file mb-3">
                     <input type="file" class="custom-file-input" id="image" name="image">
