@@ -12,7 +12,7 @@
     </div>
 
     <!-- carousel -->
-    <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel col-8" data-ride="carousel">
+    <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel col-8 p-3" data-ride="carousel">
         <ol class="carousel-indicators">
             <?php
             // echo "<script type='text/javascript'>alert('$jumlahberita');</script>";
