@@ -12,49 +12,62 @@
     </div>
 
     <!-- carousel -->
-    <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel col-8 p-3" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <?php
-            // echo "<script type='text/javascript'>alert('$jumlahberita');</script>";
-            for ($i = 0; $i < $jumlahberita;) {
-                echo '<li data-target="#transition-timer-carousel" data-slide-to="' . $i . '"';
-                if ($i == 0) {
-                    echo 'class="active"';
+    <div class="row">
+        <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel col-12 col-md-8 p-3" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <?php
+                // echo "<script type='text/javascript'>alert('$jumlahberita');</script>";
+                for ($i = 0; $i < $jumlahberita;) {
+                    echo '<li data-target="#transition-timer-carousel" data-slide-to="' . $i . '"';
+                    if ($i == 0) {
+                        echo 'class="active"';
+                    }
+                    echo '></li>';
+                    $i++;
                 }
-                echo '></li>';
-                $i++;
-            }
-            ?>
-        </ol>
+                ?>
+            </ol>
 
-        <div class="carousel-inner">
-            <?php $i = 0; ?>
-            <?php foreach ($berita as $wx) : ?>
-                <div class="carousel-item<?= $i === 0 ? ' active' : '' ?>">
-                    <img class="d-block w-100" src="<?php echo base_url('assets/img/berita/' . $wx['image']) ?>" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5><?php echo $wx['judul'] ?></h5>
-                        <p> By : <?php echo $wx['nama'] ?> </p>
-                        <a href="" target="#" class="btn btn-outline-light">
-                            Readmore</a>
+            <div class="carousel-inner">
+                <?php $i = 0; ?>
+                <?php foreach ($berita as $wx) : ?>
+                    <div class="carousel-item<?= $i === 0 ? ' active' : '' ?>">
+                        <img class="d-block w-100" src="<?php echo base_url('assets/img/berita/' . $wx['image']) ?>" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5><?php echo $wx['judul'] ?></h5>
+                            <p> By : <?php echo $wx['nama'] ?> </p>
+                            <a href="" target="#" class="btn btn-outline-light">
+                                Readmore</a>
+                        </div>
                     </div>
-                </div>
-            <?php $i++;
-            endforeach ?>
+                <?php $i++;
+                endforeach ?>
+            </div>
+
+            <!-- control -->
+            <a class="carousel-control-prev" href="#transition-timer-carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#transition-timer-carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- end carousel -->
+        <div class="col-md-3 p-3">
+            <!-- Blog sidebar -->
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cras justo odio</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+            </div>
+            <!-- end blog sidebar -->
         </div>
 
-        <!-- control -->
-        <a class="carousel-control-prev" href="#transition-timer-carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#transition-timer-carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
-    <!-- end carousel -->
-
 
     <div class="card-deck">
         <!-- showcase berita -->

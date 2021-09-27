@@ -35,7 +35,7 @@
                         <a class="nav-link" href="<?= site_url('overview') ?>">BERANDA </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= site_url('#') ?>">BERITA </a>
+                        <a class="nav-link" href="<?= site_url('listberita') ?>">BERITA </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

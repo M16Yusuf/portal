@@ -3,14 +3,15 @@
 <script src="<?php echo base_url('assets/js/mapapi.js') ?>"> </script>
 
 <!-- body -->
-<di class="container card p-1">
-    <!-- Informasi -->
+<div class="container card p-1">
+
     <div class="row">
         <!--The div map -->
-        <div id="map" class="col-8"></div>
+        <div id="map" class="col-12 col-md-8 "></div>
         <!-- end map -->
 
-        <div class="col-4 pxy-2">
+        <!-- Informasi -->
+        <div class="col-12 col-md-4 p-4">
             <h4 class="font-weight-bold">Pengaduan</h4>
             <p>Anda dapat juga menyampaikan pengaduan melalui salah satu kontak dibawah ini.</p>
             <i class="fas fa-envelope me-3"></i> Email kami : <?php echo $kontak['1']['isi'] ?><br>
@@ -23,10 +24,9 @@
             <i class="far fa-clock"></i> Jam Operasional : <?php echo $kontak['0']['isi'] ?><br>
             <a href="https://www.google.com/maps/place/Kantor+Kepala+Desa+Laksanamekar/@-6.8825935,107.501757,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e4e79b10b24f:0xef6af5613ac05bcd!8m2!3d-6.8825925!4d107.5039195?hl=ID" target="#" class="btn btn-outline-dark">
                 <i class="fas fa-map-marker-alt"></i> Google Map</a>
-
         </div>
+        <!-- end informasi -->
     </div>
 
-    <!-- end informasi -->
-</di>
+</div>
 <!-- end body -->
