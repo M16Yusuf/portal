@@ -3,8 +3,15 @@
 <div class="container card">
     <div class="row">
         <!-- Badan artikel -->
-        <div class="col-md-8">
-            
+
+        <div class="col-md-8 ">
+            <br>
+            <h1><?= $berita['judul'] ?></h1>
+            <img class="card-img-top mt-3 mb-3" src="<?php echo base_url('assets/img/berita/' . $berita['image']) ?>" alt="Card image cap">
+            <?= $berita['isi'] ?>
+            <div class="float-right">
+                <?= $berita['nama'] ?>
+            </div>
 
 
         </div>

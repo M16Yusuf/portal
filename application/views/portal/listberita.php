@@ -14,7 +14,7 @@
                             <h5 class="card-title"> <?php echo $w['judul'] ?> </h5>
                             <p><?php $text = $w['isi'];
                                 if (strlen($text) > 200) {
-                                    $text = substr($text, 0, 200) . ' ..readmore';
+                                    $text = substr($text, 0, 200) . '<a href=' . base_url('listberita/detail/') . $w['id'] . '> readmore...' . '</a>';
                                 }
                                 echo $text ?> </p>
                             <p>By : <?php echo $w['nama'] ?> </p>
