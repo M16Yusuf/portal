@@ -14,10 +14,10 @@
 
 <div class="container card">
     <!-- carousel -->
-    <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+    <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel col-8" data-ride="carousel">
         <ol class="carousel-indicators">
             <?php
-            echo "<script type='text/javascript'>alert('$jumlahberita');</script>";
+            // echo "<script type='text/javascript'>alert('$jumlahberita');</script>";
             for ($i = 0; $i < $jumlahberita;) {
                 echo '<li data-target="#transition-timer-carousel" data-slide-to="' . $i . '"';
                 if ($i == 0) {
@@ -80,24 +80,3 @@
 
 </div>
 <!-- end body -->
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100 spanduk" src="<?php echo base_url('assets/img/jumbotron3.jpg') ?>" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="<?php echo base_url('assets/img/jumbotron1.jpg') ?>" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="<?php echo base_url('assets/img/jumbotron2.jpg') ?>" alt="Third slide">
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
