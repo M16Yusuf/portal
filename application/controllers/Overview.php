@@ -10,7 +10,10 @@ class Overview extends CI_Controller
     public function index()
     {
         $query = $this->db->query('SELECT berita.id, berita.judul, berita.isi, berita.image, user.nama, berita.timestamp FROM berita INNER JOIN user ON berita.author=user.id;');
+        $count = $this->db->query('SELECT COUNT(judul) FROM berita');
+
         $data['berita'] = $query->result_array();
+        $data['jumlahberita'] = $this->db->count_all('berita');
         // $data['news'] = $this->db->get('berita')->result_array();
         $data['kontak'] = $this->db->get('aboutus')->result_array();
         // load view portal Overview

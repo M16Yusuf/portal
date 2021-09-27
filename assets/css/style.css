@@ -24,4 +24,10 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .spanduk{
+    object-fit: cover;
+    width: 400px;
+    height: 100px;
+  }
   
