@@ -1,6 +1,6 @@
 <!-- body -->
-<div class="container card px-0">
-    <div class="jumbotron text-white jumbotron-image shadow" style="background-image: url(<?php echo base_url('assets/img/jumbotron.jpg') ?>);">
+<div class="container">
+    <div class="jumbotron text-white jumbotron-image shadow" style="background-image: url(<?php echo base_url('assets/img/jumbotron.jpg') ?>); height: 500px;">
         <h2 class="mb-4">
             DESA LAKSANAMEKAR
         </h2>
@@ -11,8 +11,8 @@
             <i class="fas fa-map-marker-alt"></i> Google Map</a>
     </div>
 
-    <!-- carousel -->
     <div class="row">
+        <!-- carousel -->
         <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel col-12 col-md-8 p-3" data-ride="carousel">
             <ol class="carousel-indicators">
                 <?php
@@ -57,11 +57,12 @@
         <!-- end carousel -->
         <div class="col-md-3 p-3">
             <!-- Blog sidebar -->
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 22rem; height: 20rem;">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
+                    <div class="list-view">
+                        <h5 class="card-title"><span>Peta Desa</span></h5>
+                        <div><iframe src="https://maps.google.com/maps?q=desa%20laksanamekar&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen=""></iframe></div>
+                    </div>
                 </ul>
             </div>
             <!-- end blog sidebar -->
@@ -73,15 +74,17 @@
         <!-- showcase berita -->
         <?php $i = 1; ?>
         <?php foreach ($berita as $w) : ?>
-            <div class="card">
-                <img class="card-img-top" src="<?php echo base_url('assets/img/berita/' . $w['image']) ?>" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title"> <?php echo $w['judul'] ?> </h5>
-                    <?php $w['judul'] ?>
-                </div>
-                <div class="card-footer">
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card mb-5">
+                    <img class="card-img-top justifiy-content-center" src="<?php echo base_url('assets/img/berita/' . $w['image']) ?>" alt="Card image cap" style="height: 250px; background-position: center;">
+                    <div class="card-body">
+                        <h5 class="card-title"> <?php echo $w['judul'] ?> </h5>
+                        <?php $w['judul'] ?>
+                    </div>
+                    <div class="card-footer">
 
-                    <small class="text-muted"> <?php echo $w['nama'] ?> </small>
+                        <small class="text-muted"> <?php echo $w['nama'] ?> </small>
+                    </div>
                 </div>
             </div>
             <?php $i++; ?>

@@ -7,7 +7,7 @@
             <?php foreach ($berita as $w) : ?>
                 <div class="row p-4">
                     <div class="col-ms-5 col-sm-5">
-                        <img class="card-img-top" src="<?php echo base_url('assets/img/berita/' . $w['image']) ?>" alt="Card image cap">
+                        <img class="card-img-top" style="max-width:250px;max-height:200px;" src="<?php echo base_url('assets/img/berita/' . $w['image']) ?>" alt="Card image cap">
                     </div>
                     <div class="col-ms-7 col-sm-7">
                         <div class="card-body p-0">
@@ -17,7 +17,7 @@
                                     $text = substr($text, 0, 200) . '<a href=' . base_url('listberita/detail/') . $w['id'] . '> readmore...' . '</a>';
                                 }
                                 echo $text ?> </p>
-                            <p>By : <?php echo $w['nama'] ?> </p>
+                            <p>By : <?php echo $w['nama'] . ' pada : ' . $w['date(berita.timestamp)'] ?> </p>
                         </div>
                     </div>
                 </div>

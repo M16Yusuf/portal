@@ -7,7 +7,20 @@
 
     <div class="row">
         <!--The div map -->
-        <div id="map" class="col-12 col-md-8 "></div>
+        <div class="col-12 col-md-8">
+            <div class="gmap_canvas">
+                <iframe width="750" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=kantor%20desa%20laksanamekar&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <a href="https://www.embedgooglemap.net"></a>
+                <style>
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: auto;
+                        width: auto;
+                    }
+                </style>
+            </div>
+        </div>
         <!-- end map -->
 
         <!-- Informasi -->
