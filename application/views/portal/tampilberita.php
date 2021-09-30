@@ -1,41 +1,61 @@
-<!-- Body -->
-
-<div class="container card">
-    <div class="row">
-        <!-- Badan artikel -->
-
-        <div class="col-md-8 ">
-            <br>
-            <blockquote class="blockquote text-center">
-                <h2>
-                    <p class="mb-0 text-left"><?= $berita['judul'] ?></p>
-                </h2>
-            </blockquote>
-
-            <img class="card-img-top mt-0 mb-3" src="<?php echo base_url('assets/img/berita/' . $berita['image']) ?>" alt="Card image cap">
-            <?= $berita['isi'] ?>
-            <blockquote class="blockquote text-center">
-
-                <footer class="blockquote-footer">By : <cite title="Source Title"> <?= $berita['nama'] ?> </cite></footer>
-            </blockquote>
-
-
-
-        </div>
-        <!-- end artikel -->
-
-        <!-- Blog sidebar -->
-        <div class="col-md-3 p-3">
-            <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
+<div class="page-section pt-5">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ul class="breadcrumb p-0 mb-0 bg-transparent">
+          <li class="breadcrumb-item"><a href="<?= base_url('overview')?>">Beranda</a></li>
+          <li class="breadcrumb-item"><a href="<?= base_url('listberita')?>">Berita</a></li>
+          <li class="breadcrumb-item active"><?= $berita['judul']?></li>
+        </ul>
+      </nav>
+      
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="blog-single-wrap">
+            <div class="header">
+              <div class="post-thumb">
+                <img src="<?= base_url('assets/img/berita/' . $berita['image']) ?>" alt="">
+              </div>
             </div>
-        </div>
-        <!-- end blog sidebar -->
-    </div>
-</div>
+            <h1 class="post-title"><?= $berita['judul']?></h1>
+            <div class="post-meta">
+              <div class="post-date">
+                <span class="icon">
+                  <span class="mai-time-outline"></span>
+                </span> <?= $berita['timestamp']?>
+              </div>
+            </div>
+            <div class="post-content">
+            <?= $berita['isi']?>
+            </div>
+          </div>
 
-<!--End body -->
+        </div>
+        <div class="col-lg-4">
+          <div class="widget">
+
+            <!-- Widget recent post -->
+            <div class="widget-box">
+              <h4 class="widget-title">Recent Post</h4>
+              <div class="divider"></div>
+              
+              <?php $i = 1 ; ?>
+              <?php foreach ($recent as $b) : ?>
+              <div class="blog-item">
+                        <a class="post-thumb" href="">
+                            <img src="<?= base_url('assets/img/berita/' . $b['image']) ?>" alt="">
+                        </a>
+                        <div class="content">
+                            <h6 class="post-title"><a href="<?= base_url('listberita/detail/').$b['id']?>"><?= $b['judul']?></a></h6>
+                        <div class="meta">
+                            <a href="#"><span class="mai-person"></span> <?= $b['nama']?></a>
+                    </div>
+                  </div>
+                </div>
+                <?php if($i++ == 4) : break; ?>
+            <?php endif ?>
+                <?php endforeach ?>
+</div>
+</div>
+</div>
+</div>
+</div>

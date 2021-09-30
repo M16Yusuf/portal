@@ -56,12 +56,12 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Hapus data admin</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Hapus data berita</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Apakah anda yakin untuk menghapus admin?</div>
+                <div class="modal-body">Apakah anda yakin untuk menghapus berita?</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal" id="delete_cancel_link">Batal</button>
                     <a class="btn btn-primary" id="delete_link_m_n">Hapus</a>

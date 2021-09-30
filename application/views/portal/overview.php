@@ -1,101 +1,132 @@
-<!-- body -->
-<div class="container card px-0">
-    <div class="jumbotron text-white jumbotron-image shadow" style="background-image: url(<?php echo base_url('assets/img/jumbotron.jpg') ?>);">
-        <h2 class="mb-4">
-            DESA LAKSANAMEKAR
-        </h2>
-        <p class="lead mb-4">
-            Jl. Raya Batujajar No.270, Laksanamekar, Padalarang, Kabupaten Bandung Barat, Jawa Barat 40553
-        </p>
-        <a href="https://www.google.com/maps/place/Kantor+Kepala+Desa+Laksanamekar/@-6.8825935,107.501757,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e4e79b10b24f:0xef6af5613ac05bcd!8m2!3d-6.8825925!4d107.5039195?hl=ID" target="#" class="btn btn-outline-light">
-            <i class="fas fa-map-marker-alt"></i> Google Map</a>
+<div class="container">
+      <div class="page-banner home-banner">
+        <div class="row align-items-center flex-wrap-reverse h-100">
+          <div class="col-md-6 py-5 wow fadeInLeft">
+            <h1 class="mb-4">Desa Laksanamekar</h1>
+            <p class="text-lg text-grey mb-5">Jl. Raya Batujajar No.270, Laksanamekar, Padalarang, Kabupaten Bandung Barat, Jawa Barat 40553</p>
+            <a href="#" class="btn btn-primary btn-split">Google Maps<div class="fab"><span class="mai-location-outline"></span></div></a>
+          </div>
+          <div class="col-md-6 py-5 wow zoomIn">
+            <div class="img-fluid text-center">
+              <img src="<?= base_url('assets/') ?>img/gbkanan2.png" height="350" alt="">
+            </div>
+          </div>
+        </div>
+        <a href="#kontak" class="btn-scroll" data-role="smoothscroll"><span class="mai-arrow-down"></span></a>
+      </div>
     </div>
+  </header>
 
-    <!-- carousel -->
-    <div class="row">
-        <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel col-12 col-md-8 p-3" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <?php
-                // echo "<script type='text/javascript'>alert('$jumlahberita');</script>";
-                for ($i = 0; $i < $jumlahberita;) {
-                    echo '<li data-target="#transition-timer-carousel" data-slide-to="' . $i . '"';
-                    if ($i == 0) {
-                        echo 'class="active"';
-                    }
-                    echo '></li>';
-                    $i++;
-                }
-                ?>
-            </ol>
+  <div class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card-service wow fadeInUp">
+            <div class="header">
+              <span class="mai-newspaper"></span>
+            </div>
+            <div class="body">
+              <h5 class="text-secondary">Berita</h5>
+              <p>Informasi mengenai berita, dan kegiatan Desa Laksanamekar</p>
+              <a href="service.html" class="btn btn-primary">Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card-service wow fadeInUp">
+            <div class="header">
+              <span class="mai-newspaper-outline"></span>
+            </div>
+            <div class="body">
+              <h5 class="text-secondary">Visi & Misi</h5>
+              <p>Informasi mengenai visi dan misi Desa Laksanamekar</p>
+              <a href="service.html" class="btn btn-primary">Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card-service wow fadeInUp">
+            <div class="header">
+              <span class="mai-call"></span>
+            </div>
+            <div class="body">
+              <h5 class="text-secondary">Hubungi Kami</h5>
+              <p>Informasi mengenai kontak dan lokasi Desa Laksanamekar</p>
+              <a href="service.html" class="btn btn-primary">Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
 
-            <div class="carousel-inner">
-                <?php $i = 0; ?>
-                <?php foreach ($berita as $wx) : ?>
-                    <div class="carousel-item<?= $i === 0 ? ' active' : '' ?>">
-                        <img class="d-block w-100" src="<?php echo base_url('assets/img/berita/' . $wx['image']) ?>" alt="First slide">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5><?php echo $wx['judul'] ?></h5>
-                            <p> By : <?php echo $wx['nama'] ?> </p>
-                            <a href="" target="#" class="btn btn-outline-light">
-                                Readmore</a>
+  <div class="container">
+      <div class="page-banner home-banner" id="kontak">
+      <div class="row align-items-center">
+        <div class="col-lg-6 py-3 wow fadeInUp">
+          <span class="subhead">Kantor Desa Laksanamekar</span>
+          <h2 class="title-section">Laksanamekar, Kec. Padalarang, Kabupaten Bandung  Barat</h2>
+          <div class="divider"></div>
+
+          <p>Desa Laksanamekar mempunyai besar wilayah sebesar ... meliputi .. RW</p>
+          <p>Berbatasan dengan desa ....</p>
+          <a href="about.html" class="btn btn-primary mt-3">Read More</a>
+        </div>
+        <div class="col-lg-6 py-3 wow fadeInRight">
+          <div class="img-fluid py-3 text-center">
+            <iframe width="425" height="430" id="gmap_canvas" src="https://maps.google.com/maps?q=desa%20laksanamekar&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+  <!-- Blog -->
+  <div class="page-section">
+    <div class="container">
+      <div class="text-center wow fadeInUp">
+        <div class="subhead">Berita</div>
+        <h2 class="title-section">Baca berita terbaru kami</h2>
+        <div class="divider mx-auto"></div>
+      </div>
+
+      <div class="row mt-5">
+        <?php $i = 1; ?>
+            <?php foreach ($berita as $b) : ?>
+
+            <div class="col-lg-4 py-3  wow fadeInUp">
+                <div class="card-blog h-100">
+                    <div class="header">
+                        <div class="post-thumb">
+                            <img src="<?= base_url('assets/img/berita/' . $b['image']) ?>" alt="">
                         </div>
                     </div>
-                <?php $i++;
-                endforeach ?>
-            </div>
-
-            <!-- control -->
-            <a class="carousel-control-prev" href="#transition-timer-carousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#transition-timer-carousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        <!-- end carousel -->
-        <div class="col-md-3 p-3">
-            <!-- Blog sidebar -->
-            <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
-            <!-- end blog sidebar -->
-        </div>
-
-    </div>
-
-    <div class="card-deck">
-        <!-- showcase berita -->
-        <?php $i = 1; ?>
-        <?php foreach ($berita as $w) : ?>
-            <div class="card">
-                <img class="card-img-top" src="<?php echo base_url('assets/img/berita/' . $w['image']) ?>" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title"> <?php echo $w['judul'] ?> </h5>
-                    <?php $w['judul'] ?>
-                </div>
-                <div class="card-footer">
-
-                    <small class="text-muted"> <?php echo $w['nama'] ?> </small>
+                    <div class="body align-items-stretch" >
+                        <h3 class="post-title"><a href="<?= base_url('listberita/detail/').$b['id']?>"><?= $b['judul'] ?></a></h3>
+                        <div class="post-date">
+                            
+                            <p><?php $text = $b['isi'];
+                                if (strlen($text) > 200) {
+                                    $text = substr($text, 0, 200);
+                                }
+                                echo $text ?> </p>
+                        </div>
+                        <div class="post-date"> <a href="<?= base_url('listberita/detail/').$b['id']?>"> Baca Selengkapnya..</a></div>
+                    
+                    <div class="float-left">Oleh : <?= $b['nama']?> </div>
+                    </div>
                 </div>
             </div>
-            <?php $i++; ?>
+
+            <?php if($i++ == 6) : break; ?>
+            <?php endif ?>
         <?php endforeach ?>
-        <!-- end showcase berita -->
+        
+
+        <div class="col-12 mt-4 text-center wow fadeInUp">
+          <a href="<?= base_url('listberita')?>" class="btn btn-primary">Liat lebih banyak </a>
+        </div>
+      </div>
     </div>
-
-</div>
-
-<!-- end body -->
-
-<!-- nitip
- <blockquote class="blockquote text-center">
-    <p class="mb-0"> <?php echo $w['judul'] ?></p>
-    <footer class="blockquote-footer">By : <cite title="Source Title"> <?php echo $w['nama'] ?> </cite></footer>
-</blockquote>
--->
+  </div>
