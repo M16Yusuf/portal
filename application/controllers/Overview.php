@@ -14,7 +14,7 @@ class Overview extends CI_Controller
 
         $data['berita'] = $query->result_array();
         $data['jumlahberita'] = $this->db->count_all('berita');
-        $data['judul'] = 'Beranda';
+        $data['judul'] = 'Portal Desa Laksanamekar';
         // $data['news'] = $this->db->get('berita')->result_array();
         $data['kontak'] = $this->db->get('aboutus')->result_array();
         // load view portal Overview

@@ -10,7 +10,7 @@ class HubungiKami extends CI_Controller
     public function index()
     {
         $data['kontak'] = $this->db->get('aboutus')->result_array();
-        $data['judul'] = 'Hubungi Kami';
+        $data['judul'] = 'Hubungi Desa Laksanamekar';
 
         // load view 
         $this->load->view("portal/partial/header",$data);

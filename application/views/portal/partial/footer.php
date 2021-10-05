@@ -5,7 +5,7 @@
         <div class="col-lg-4 py-3">
           <h5>Desa Laksanamekar</h5>
           <p>Jl. Raya Batujajar No.270, Laksanamekar, Padalarang, Kabupaten Bandung Barat, Jawa Barat 40553</p>     
-          <a href="#" class="btn btn-primary btn-split">Google Maps<div class="fab"><span class="mai-location-outline"></span></div></a>
+          <a href="https://goo.gl/maps/BEDSajKsLTRNcZWv6" class="btn btn-primary btn-split">Google Maps<div class="fab"><span class="mai-location-outline"></span></div></a>
         </div>
         <div class="col-lg-4 py-3">
           <h5>Navigasi</h5>

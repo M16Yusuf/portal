@@ -22,12 +22,17 @@
         <a class="nav-link" href="<?= site_url('berita') ?>">
           <i class="fas fa-fw fa-newspaper"></i>
           <span>Informasi Berita</span></a>
-      </li>
-      <li <?= $this->uri->segment(1) == 'desa' || $this->uri->segment(1)=='' ? 'class="nav-item active"' : 'class="nav-item"' ?>>
-        <a class="nav-link" href="<?= site_url('desa') ?>">
-          <i class="fas fa-fw fa-sitemap"></i>
-          <span>Informasi Desa</span></a>
-      </li>
+        </li>
+        <li <?= $this->uri->segment(1) == 'kependudukan' || $this->uri->segment(1)=='' ? 'class="nav-item active"' : 'class="nav-item"' ?>>
+          <a class="nav-link" href="<?= site_url('kependudukan') ?>">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Informasi kependudukan</span></a>
+        </li>
+        <li <?= $this->uri->segment(1) == 'desa' || $this->uri->segment(1)=='' ? 'class="nav-item active"' : 'class="nav-item"' ?>>
+          <a class="nav-link" href="<?= site_url('desa') ?>">
+            <i class="fas fa-fw fa-sitemap"></i>
+            <span>Informasi Desa</span></a>
+        </li>
       <li <?= $this->uri->segment(1) == 'kontak' || $this->uri->segment(1)=='' ? 'class="nav-item active"' : 'class="nav-item"' ?>>
         <a class="nav-link" href="<?= site_url('kontak') ?>">
           <i class="fas fa-fw fa-id-card"></i>

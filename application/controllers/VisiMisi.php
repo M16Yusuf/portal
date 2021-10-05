@@ -10,7 +10,7 @@ class VisiMisi extends CI_Controller
     public function index()
     {
         $data['kontak'] = $this->db->get('aboutus')->result_array();
-        $data['judul'] = 'Visi & Misi';
+        $data['judul'] = 'Visi & Misi Desa Laksanamekar';
         // load view admin/overview.php
         $this->load->view("portal/partial/header",$data);
         $this->load->view("portal/visimisi", $data);

@@ -31,6 +31,9 @@
                                     <button type="submit" class="btn btn-primary btn-user btn-block">
                                         Masuk
                                     </button>
+                                    <a href="<?= base_url('')?>" class="btn btn-secondary btn-user btn-block">
+                                        Kembali
+                                    </a>
 
                                 </form>
                              

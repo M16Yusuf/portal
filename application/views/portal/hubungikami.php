@@ -6,29 +6,34 @@
           <li class="breadcrumb-item active">Hubungi Kami</li>
         </ul>
     </nav>
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4 wow zoomIn">
       <div class="maps-container">
         <iframe width="1078" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=kantor%20desa%20laksanamekar&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
       </div>
     </div>
 </div>
-    <div class="container mt-3">
+    <div class="container mt-3 wow fadeInUp">
       <div class="row text-center align-items-center">
-        <div class="col-lg-4 py-3">
-          <div class="display-4 text-center text-primary"><span class="mai-location-outline"></span></div>
-          <p class="mb-3 font-weight-medium text-lg">Alamat</p>
-          <p class="mb-0 text-secondary">Jl. Raya Batujajar No.270, Laksanamekar, Padalarang, Kabupaten Bandung Barat, Jawa Barat 40553</p>
-        </div>
-        <div class="col-lg-4 py-3">
+        <div class="col-lg-6 py-2">
           <div class="display-4 text-center text-primary"><span class="mai-call-outline"></span></div>
-          <p class="mb-3 font-weight-medium text-lg">Phone</p>
+          <p class="mb-3 font-weight-medium text-lg"><b>Phone</b></p>
           <p class="mb-0"><a href="#" class="text-secondary"><?= $kontak['2']['isi']?></a></p>
           <p class="mb-0"><a href="#" class="text-secondary"><?= $kontak['3']['isi']?></a></p>
         </div>  
-        <div class="col-lg-4 py-3">
+        <div class="col-lg-6 py-2">
           <div class="display-4 text-center text-primary"><span class="mai-mail-outline"></span></div>
-          <p class="mb-3 font-weight-medium text-lg">Alamat Email</p>
+          <p class="mb-3 font-weight-medium text-lg"><b>Alamat Email</b></p>
           <p class="mb-0"><a href="#" class="text-secondary"><?= $kontak['1']['isi']?></a></p>
+        </div>
+        <div class="col-lg-6 py-2">
+          <div class="display-4 text-center text-primary"><span class="mai-stopwatch-outline"></span></div>
+          <p class="mb-3 font-weight-medium text-lg"><b>Jam Oprasional</b></p>
+          <p class="mb-0"><a href="#" class="text-secondary"><?= $kontak['0']['isi']?></a></p>
+        </div>
+        <div class="col-lg-6 py-2">
+          <div class="display-4 text-center text-primary"><span class="mai-location-outline"></span></div>
+          <p class="mb-3 font-weight-medium text-lg"><b>Alamat</b></p>
+          <p class="mb-0 text-secondary">Jl. Raya Batujajar No.270, Laksanamekar, Padalarang, Kabupaten Bandung Barat, Jawa Barat 40553</p>
         </div>
       </div>
     </div>

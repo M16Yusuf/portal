@@ -13,7 +13,7 @@
           <div class="blog-single-wrap">
             <div class="header">
               <div class="post-thumb">
-                <img src="<?= base_url('assets/img/berita/' . $berita['image']) ?>" alt="">
+                <img src="<?= base_url('assets/img/berita/' . $berita['image']) ?>"  alt="">
               </div>
             </div>
             <h1 class="post-title"><?= $berita['judul']?></h1>
@@ -21,7 +21,8 @@
               <div class="post-date">
                 <span class="icon">
                   <span class="mai-time-outline"></span>
-                </span> <?= $berita['timestamp']?>
+                  <?php $tanggal = new DateTime($berita['timestamp']);?>
+                </span> <?= $stringDate = $tanggal->format('j F Y g:i a'); ?>
               </div>
             </div>
             <div class="post-content">
@@ -47,6 +48,8 @@
                         <div class="content">
                             <h6 class="post-title"><a href="<?= base_url('listberita/detail/').$b['id']?>"><?= $b['judul']?></a></h6>
                         <div class="meta">
+                        <?php $recent = new DateTime($b['timestamp']);?>
+                            <a href="#"><span class="mai-calendar"></span> <?= $stringDate = $recent->format('j M Y'); ?></a>
                             <a href="#"><span class="mai-person"></span> <?= $b['nama']?></a>
                     </div>
                   </div>

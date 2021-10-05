@@ -36,22 +36,23 @@
 
         <div class="navbar-collapse collapse" id="navbarContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <li <?= $this->uri->segment(1) == 'overview' || $this->uri->segment(1)=='' ? 'class="nav-item active"' : 'class="nav-item"' ?>>
               <a class="nav-link" href="<?= base_url('overview')?>">Beranda</a>
             </li>
-            <li class="nav-item">
+            <li <?= $this->uri->segment(1) == 'listberita'  ? 'class="nav-item active"' : 'class="nav-item"' ?>>
               <a class="nav-link" href="<?= base_url('listberita')?>">Berita</a>
             </li>
-            <li class="nav-item dropdown">
+            <li <?= $this->uri->segment(1) == 'visimisi'  || $this->uri->segment(1)=='struktur' || $this->uri->segment(1)=='penduduk' ? 'class="nav-item dropdown active"' : 'class="nav-item dropdown"' ?>>
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Informasi
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="<?= base_url('visimisi')?>">Visi & Misi</a>
+                <a class="dropdown-item" href="<?= base_url('penduduk')?>">Kependudukan</a>
                 <a class="dropdown-item" href="<?= base_url('struktur')?>">Struktur Organisasi</a>
               </div>
             </li>
-            <li class="nav-item">
+            <li <?= $this->uri->segment(1) == 'hubungikami'  ? 'class="nav-item active"' : 'class="nav-item"' ?>>
               <a class="nav-link" href="<?= base_url('hubungikami')?>">Hubungi Kami</a>
             </li>
           </ul>
